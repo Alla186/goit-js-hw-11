@@ -40,7 +40,6 @@ function handleSubmit(evt) {
     }
 
     loaderShow();
-
     getInform(searchInput)
         .then(data => {
             if (data.hits.length === 0) {
