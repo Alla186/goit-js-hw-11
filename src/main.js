@@ -12,7 +12,7 @@ const form = document.querySelector(".form-inline");
 const list = document.querySelector(".js-list");
 const loader = document.querySelector(".loader");
 
-form.addEventListener("submit", handleSubmit);
+form.addEventListener("submit", searchImages);
 
 function loaderShow() {
     loader.classList.toggle("visible");
@@ -24,7 +24,7 @@ const lightbox = new SimpleLightbox('.images a', {
 });
 
 
-function handleSubmit(evt) {
+function searchImages(evt) {
     evt.preventDefault();
     list.innerHTML = '';
     const { query } = evt.currentTarget.elements;
@@ -40,6 +40,7 @@ function handleSubmit(evt) {
     }
 
     loaderShow();
+
     getInform(searchInput)
         .then(data => {
             if (data.hits.length === 0) {
