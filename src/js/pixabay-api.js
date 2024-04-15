@@ -1,4 +1,4 @@
-export function getInform(str = "") {
+export function gellery(str = "") {
     const BASE_URL = 'https://pixabay.com/api/';
     const API_KEY = '43214840-c1c575028749116cdd7e0c5e8';
 

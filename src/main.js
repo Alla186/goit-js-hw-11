@@ -5,7 +5,7 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 import { createMarkup } from "./js/render-functions.js";
-import { getInform } from "./js/pixabay-api.js";
+import { gellery } from "./js/pixabay-api.js";
 
 
 const form = document.querySelector(".form-inline");
@@ -41,7 +41,7 @@ function searchImages(evt) {
 
     loaderShow();
 
-    getInform(searchInput)
+    gellery(searchInput)
         .then(data => {
             if (data.hits.length === 0) {
                 iziToast.warning({
